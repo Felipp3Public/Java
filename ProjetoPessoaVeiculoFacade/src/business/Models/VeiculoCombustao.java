@@ -8,12 +8,13 @@ public class VeiculoCombustao extends Veiculo {
 
     public VeiculoCombustao() {
         super();
+        cilindrada = 0;
         setTaxaFixaAnual(100.00);
     }
 
     public VeiculoCombustao(String matricula, String marca, String modelo, String chassi, int cilindrada, String lugares, String portas) {
         super(matricula, marca, modelo, chassi, lugares, portas);
-        setCilindrada(cilindrada);
+        this.cilindrada = cilindrada;
         setTaxaFixaAnual(100.00 + (getCilindrada() * 0.025));
     }
 
